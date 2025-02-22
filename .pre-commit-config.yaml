@@ -1,0 +1,37 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
+    -   id: debug-statements
+
+-   repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+    -   id: black
+        args: [--line-length=88]
+
+-   repo: https://github.com/pycqa/isort
+    rev: 6.0.0
+    hooks:
+    -   id: isort
+        args: ["--profile", "black"]
+
+-   repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.9.7
+    hooks:
+    -   id: ruff
+        args: [--fix]
+
+-   repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.2.2
+    hooks:
+    -   id: commitizen
+        stages: [commit-msg]
+
+ci:
+    autofix_commit_msg: "style: auto format from pre-commit"
+    autoupdate_commit_msg: "chore: update pre-commit hooks"

@@ -8,14 +8,14 @@
    curl -L https://huggingface.co/KoljaB/SamanthaOpenwakeword/resolve/main/suh_mahn_thuh.onnx -o suh_mahn_thuh.onnx
    curl -L https://huggingface.co/KoljaB/SamanthaOpenwakeword/resolve/main/suh_man_tuh.onnx -o suh_man_tuh.onnx
    ```
-   
+
    Ensure you have `curl` installed for downloading files. If not, you can manually download the files from the provided URLs.
 
 2. Create and activate a virtual environment:
    ```bash
    python -m venv venv
    ```
-   
+
    - For Windows:
      ```bash
      venv\Scripts\activate
@@ -39,5 +39,5 @@
    ```bash
    python openwakeword_test.py
    ```
-   
-   On the very first start some models for openwakeword are downloaded. 
+
+   On the very first start some models for openwakeword are downloaded.

@@ -229,7 +229,7 @@
         const message = new Uint8Array(
           metadataLength.byteLength + metadataBuffer.byteLength + pcm16Data.byteLength
         );
-        
+
         message.set(new Uint8Array(metadataLength.buffer), 0);
         message.set(metadataBuffer, metadataLength.byteLength);
         message.set(new Uint8Array(pcm16Data.buffer), metadataLength.byteLength + metadataBuffer.byteLength);

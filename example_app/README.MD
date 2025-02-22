@@ -14,8 +14,8 @@ Steps for a **GPU-optimized** installation:
 
 3. **Install ffmpeg**:
 
-    You can download an installer for your OS from the [ffmpeg Website](https://ffmpeg.org/download.html).  
-    
+    You can download an installer for your OS from the [ffmpeg Website](https://ffmpeg.org/download.html).
+
     Or use a package manager:
 
     - **On Ubuntu or Debian**:
@@ -41,7 +41,7 @@ Steps for a **GPU-optimized** installation:
     - **On Windows using Scoop** ([https://scoop.sh/](https://scoop.sh/)):
         ```bash
         scoop install ffmpeg
-        ```    
+        ```
 
 4. **ElevenlabsEngine**
     - If you plan to use the `ElevenlabsEngine`, you need `mpv` is installed on your system for streaming mpeg audio

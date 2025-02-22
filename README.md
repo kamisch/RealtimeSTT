@@ -15,7 +15,7 @@
 
 ## About the Project
 
-RealtimeSTT listens to the microphone and transcribes voice into text.  
+RealtimeSTT listens to the microphone and transcribes voice into text.
 
 > **Hint:** *<strong>Check out [Linguflex](https://github.com/KoljaB/Linguflex)</strong>, the original project from which RealtimeSTT is spun off. It lets you control your environment by speaking and is one of the most capable and sophisticated open-source assistants currently available.*
 
@@ -24,7 +24,7 @@ It's ideal for:
 - **Voice Assistants**
 - Applications requiring **fast and precise** speech-to-text conversion
 
-https://github.com/user-attachments/assets/797e6552-27cd-41b1-a7f3-e5cbc72094f5  
+https://github.com/user-attachments/assets/797e6552-27cd-41b1-a7f3-e5cbc72094f5
 
 [CLI demo code (reproduces the video above)](tests/realtimestt_test.py)
 
@@ -166,13 +166,13 @@ If you didn't use CUDA models before, some additional steps might be needed one 
         - for 11.8 visit [NVIDIA cuDNN Archive](https://developer.nvidia.com/rdp/cudnn-archive).
             - Click on "Download cuDNN v8.7.0 (November 28th, 2022), for CUDA 11.x".
             - Download and install the software.
-    
+
 3. **Install ffmpeg**:
 
     > **Note**: *Installation of ffmpeg might not actually be needed to operate RealtimeSTT* <sup> *thanks to jgilbert2017 for pointing this out</sup>
 
-    You can download an installer for your OS from the [ffmpeg Website](https://ffmpeg.org/download.html).  
-    
+    You can download an installer for your OS from the [ffmpeg Website](https://ffmpeg.org/download.html).
+
     Or use a package manager:
 
     - **On Ubuntu or Debian**:
@@ -194,7 +194,7 @@ If you didn't use CUDA models before, some additional steps might be needed one 
         ```bash
         winget install Gyan.FFmpeg
         ```
-        
+
     - **On Windows using Chocolatey** ([https://chocolatey.org/](https://chocolatey.org/)):
         ```bash
         choco install ffmpeg
@@ -203,7 +203,7 @@ If you didn't use CUDA models before, some additional steps might be needed one 
     - **On Windows using Scoop** ([https://scoop.sh/](https://scoop.sh/)):
         ```bash
         scoop install ffmpeg
-        ```    
+        ```
 
 ## Quick Start
 
@@ -257,7 +257,7 @@ When running recorder.text in a loop it is recommended to use a callback, allowi
 ```python
 def process_text(text):
     print (text)
-    
+
 while True:
     recorder.text(process_text)
 ```
@@ -279,7 +279,7 @@ if __name__ == '__main__':
 
 ### Wakewords
 
-Keyword activation before detecting voice. Write the comma-separated list of your desired activation keywords into the wake_words parameter. You can choose wake words from these list: alexa, americano, blueberry, bumblebee, computer, grapefruits, grasshopper, hey google, hey siri, jarvis, ok google, picovoice, porcupine, terminator. 
+Keyword activation before detecting voice. Write the comma-separated list of your desired activation keywords into the wake_words parameter. You can choose wake words from these list: alexa, americano, blueberry, bumblebee, computer, grapefruits, grasshopper, hey google, hey siri, jarvis, ok google, picovoice, porcupine, terminator.
 
 ```python
 recorder = AudioToTextRecorder(wake_words="jarvis")
@@ -385,7 +385,7 @@ if __name__ == '__main__':
 
 The test subdirectory contains a set of scripts to help you evaluate and understand the capabilities of the RealtimeTTS library.
 
-Test scripts depending on RealtimeTTS library may require you to enter your azure service region within the script. 
+Test scripts depending on RealtimeTTS library may require you to enter your azure service region within the script.
 When using OpenAI-, Azure- or Elevenlabs-related demo scripts the API Keys should be provided in the environment variables OPENAI_API_KEY, AZURE_SPEECH_KEY and ELEVENLABS_API_KEY (see [RealtimeTTS](https://github.com/KoljaB/RealtimeTTS))
 
 - **simple_test.py**
@@ -435,7 +435,7 @@ When you initialize the `AudioToTextRecorder` class, you have various options to
 
 - **gpu_device_index** (int, default=0): GPU Device Index to use. The model can also be loaded on multiple GPUs by passing a list of IDs (e.g. [0, 1, 2, 3]).
 
-- **device** (str, default="cuda"): Device for model to use. Can either be "cuda" or "cpu". 
+- **device** (str, default="cuda"): Device for model to use. Can either be "cuda" or "cpu".
 
 - **on_recording_start**: A callable function triggered when recording starts.
 
@@ -546,7 +546,7 @@ When you initialize the `AudioToTextRecorder` class, you have various options to
 
 - **on_wakeword_detection_end**: A callable function triggered when stopping to listen for wake words (e.g. because of timeout or wake word detected)
 
-## OpenWakeWord  
+## OpenWakeWord
 
 ### Training models
 
@@ -586,9 +586,9 @@ Suggested starting parameters for OpenWakeWord usage:
 
 ## Contribution
 
-Contributions are always welcome! 
+Contributions are always welcome!
 
-Shoutout to [Steven Linn](https://github.com/stevenlafl) for providing docker support. 
+Shoutout to [Steven Linn](https://github.com/stevenlafl) for providing docker support.
 
 ## License
 
@@ -596,6 +596,6 @@ Shoutout to [Steven Linn](https://github.com/stevenlafl) for providing docker su
 
 ## Author
 
-Kolja Beigel  
-Email: kolja.beigel@web.de  
+Kolja Beigel
+Email: kolja.beigel@web.de
 [GitHub](https://github.com/KoljaB/RealtimeSTT)

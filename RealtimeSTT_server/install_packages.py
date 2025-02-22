@@ -1,6 +1,7 @@
+import importlib
 import subprocess
 import sys
-import importlib
+
 
 def check_and_install_packages(packages):
     """
@@ -15,10 +16,10 @@ def check_and_install_packages(packages):
         - 'version': (Optional) Version constraint for the package.
     """
     for package in packages:
-        module_name = package['module_name']
-        attribute = package.get('attribute')
-        install_name = package.get('install_name', module_name)
-        version = package.get('version', '')
+        module_name = package["module_name"]
+        attribute = package.get("attribute")
+        install_name = package.get("install_name", module_name)
+        version = package.get("version", "")
 
         try:
             # Attempt to import the module
@@ -32,7 +33,7 @@ def check_and_install_packages(packages):
                 f"{'' if not attribute else ' with attribute ' + attribute}, which is not installed or missing.\n"
                 f"Do you want to install '{install_name}' now? (y/n): "
             )
-            if user_input.strip().lower() == 'y':
+            if user_input.strip().lower() == "y":
                 try:
                     # Build the pip install command
                     install_command = [sys.executable, "-m", "pip", "install"]

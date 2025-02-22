@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 # Read requirements.txt
-with open('requirements.txt') as f:
+with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
 setuptools.setup(
@@ -22,15 +22,15 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.6',
+    python_requires=">=3.6",
     install_requires=requirements,
     keywords="real-time, audio, transcription, speech-to-text, voice-activity-detection, VAD, real-time-transcription, ambient-noise-detection, microphone-input, faster_whisper, speech-recognition, voice-assistants, audio-processing, buffered-transcription, pyaudio, ambient-noise-level, voice-deactivity",
     package_data={"RealtimeSTT": ["warmup_audio.wav"]},
     include_package_data=True,
     entry_points={
-        'console_scripts': [
-            'stt-server=RealtimeSTT_server.stt_server:main',
-            'stt=RealtimeSTT_server.stt_cli_client:main',
+        "console_scripts": [
+            "stt-server=RealtimeSTT_server.stt_server:main",
+            "stt=RealtimeSTT_server.stt_cli_client:main",
         ],
     },
 )

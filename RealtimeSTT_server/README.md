@@ -180,10 +180,10 @@ You can configure the server using the following command-line arguments:
 - **Default**:
 
   ```
-  End incomplete sentences with ellipses. Examples: 
-  Complete: The sky is blue. 
-  Incomplete: When the sky... 
-  Complete: She walked home. 
+  End incomplete sentences with ellipses. Examples:
+  Complete: The sky is blue.
+  Incomplete: When the sky...
+  Complete: She walked home.
   Incomplete: Because he...
   ```
 
@@ -289,7 +289,7 @@ The client connects to the STT server's control and data WebSocket URLs to facil
 - **Description**: Audio input device index. Use `-L` to list available devices.
 
 #### `-l`, `--language`
-- **Type**: `str` 
+- **Type**: `str`
 - **Default**: `'en'`
 - **Metavar**: `LANG`
 - **Description**: Language code to be used for transcription.
@@ -354,19 +354,19 @@ The client connects to the STT server's control and data WebSocket URLs to facil
 - **Default**: `1.0`
 - **Description**: Post speech silence duration in seconds.
 
-#### `--unknown-pause` 
+#### `--unknown-pause`
 - **Type**: `float`
 - **Default**: `1.3`
 - **Description**: Unknown sentence detection pause duration in seconds.
 
 #### `--mid-pause`
-- **Type**: `float` 
+- **Type**: `float`
 - **Default**: `3.0`
 - **Description**: Mid-sentence detection pause duration in seconds.
 
 #### `--end-pause`
 - **Type**: `float`
-- **Default**: `0.7` 
+- **Default**: `0.7`
 - **Description**: End of sentence detection pause duration in seconds.
 
 #### `--hard-break`

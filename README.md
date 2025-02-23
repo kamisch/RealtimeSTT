@@ -205,6 +205,64 @@ If you didn't use CUDA models before, some additional steps might be needed one 
         scoop install ffmpeg
         ```
 
+## Development
+
+RealtimeSTT uses Poetry for dependency management, pre-commit hooks for code quality, and Commitizen for standardized commit messages and automated changelog generation.
+
+### Setup Development Environment
+
+1. Install Poetry:
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
+2. Clone and install dependencies:
+```bash
+git clone https://github.com/KoljaB/RealtimeSTT.git
+cd RealtimeSTT
+poetry install
+```
+
+3. Install pre-commit hooks:
+```bash
+poetry run pre-commit install --hook-type commit-msg
+```
+
+### Development Workflow
+
+1. **Managing Dependencies**
+```bash
+poetry add package-name        # Add dependency
+poetry add --group dev package-name  # Add dev dependency
+```
+
+2. **Code Quality**
+```bash
+poetry run pre-commit run --all-files  # Run all checks
+```
+
+3. **Commit Changes**
+Use conventional commits format:
+```bash
+git commit -m "feat: add new feature"  # New feature (minor version)
+git commit -m "fix: resolve issue"     # Bug fix (patch version)
+git commit -m "docs: update readme"    # Documentation only
+```
+
+4. **Make a Release**
+```bash
+poetry run cz bump  # Updates version, changelog and creates tag
+```
+
+### Project Structure
+```
+realtimestt/
+├── RealtimeSTT/        # Main package code
+├── tests/              # Test files
+├── pyproject.toml      # Project configuration
+├── CHANGELOG.md        # Auto-generated changelog
+└── .pre-commit-config.yaml  # Code quality hooks
+```
 ## Quick Start
 
 Basic usage:

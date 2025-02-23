@@ -31,6 +31,9 @@ repos:
     hooks:
     -   id: commitizen
         stages: [commit-msg]
+    -   id: commitizen-branch
+        stages: [push]
+        args: [--force]
 
 ci:
     autofix_commit_msg: "style: auto format from pre-commit"

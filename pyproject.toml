@@ -28,7 +28,7 @@ Changelog = "https://github.com/kamisch/realtimestt/blob/main/CHANGELOG.md"
 name = "realtimestt"
 version = "0.4.0"
 packages = [
-    { include = "RealtimeSTT" }
+    { include = "realtimestt" }
 ]
 
 [tool.poetry.dependencies]
